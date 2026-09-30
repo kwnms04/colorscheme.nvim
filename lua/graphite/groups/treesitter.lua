@@ -12,10 +12,10 @@ function M.get(c, opts)
     ["@variable.member"] = { fg = c.property },
 
     ["@constant"] = { link = "Constant" },
-    ["@constant.builtin"] = { fg = c.number },
+    ["@constant.builtin"] = { fg = c.type },
     ["@constant.macro"] = { link = "Macro" },
 
-    ["@module"] = { fg = c.type },
+    ["@module"] = { fg = c.module },
     ["@module.builtin"] = { fg = c.builtin },
     ["@label"] = { fg = c.func },
 
@@ -39,12 +39,12 @@ function M.get(c, opts)
     ["@type.builtin"] = { fg = c.type, italic = true },
     ["@type.definition"] = { link = "Type" },
     ["@type.qualifier"] = { link = "@keyword.modifier" },
-    ["@attribute"] = { fg = c.special },
+    ["@attribute"] = { fg = c.module },
     ["@attribute.builtin"] = { fg = c.builtin },
     ["@property"] = { fg = c.property },
 
     ["@function"] = { link = "Function" },
-    ["@function.builtin"] = { fg = c.func, italic = true },
+    ["@function.builtin"] = { fg = c.type },
     ["@function.call"] = { link = "Function" },
     ["@function.macro"] = { link = "Macro" },
     ["@function.method"] = { link = "Function" },
@@ -55,7 +55,7 @@ function M.get(c, opts)
     ["@keyword"] = { link = "Keyword" },
     ["@keyword.coroutine"] = { link = "Keyword" },
     ["@keyword.function"] = { link = "Keyword" },
-    ["@keyword.operator"] = { fg = c.keyword },
+    ["@keyword.operator"] = { fg = c.operator },
     ["@keyword.import"] = { link = "Include" },
     ["@keyword.export"] = { link = "Include" },
     ["@keyword.conditional.ternary"] = { link = "Operator" },
@@ -70,7 +70,7 @@ function M.get(c, opts)
 
     ["@punctuation.delimiter"] = { link = "Delimiter" },
     ["@punctuation.bracket"] = { fg = c.punctuation },
-    ["@punctuation.special"] = { fg = c.special },
+    ["@punctuation.special"] = { fg = c.operator },
 
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { link = "Comment" },
@@ -100,7 +100,7 @@ function M.get(c, opts)
     ["@markup.link.label"] = { fg = c.func },
     ["@markup.link.url"] = { fg = c.func, underline = true },
     ["@markup.raw"] = { fg = c.string },
-    ["@markup.list"] = { fg = c.keyword },
+    ["@markup.list"] = { fg = c.operator },
     ["@markup.list.checked"] = { fg = c.ok },
     ["@markup.list.unchecked"] = { fg = c.fg_gutter },
 

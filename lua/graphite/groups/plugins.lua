@@ -12,7 +12,7 @@ local function kinds(c)
     Variable = c.fg,
     Class = c.type,
     Interface = c.type,
-    Module = c.type,
+    Module = c.module,
     Property = c.property,
     Unit = c.number,
     Value = c.number,
@@ -33,11 +33,11 @@ local function kinds(c)
     Array = c.punctuation,
     Boolean = c.number,
     Key = c.property,
-    Namespace = c.type,
+    Namespace = c.module,
     Null = c.constant,
     Number = c.number,
     Object = c.constant,
-    Package = c.type,
+    Package = c.module,
     String = c.string,
   }
 end

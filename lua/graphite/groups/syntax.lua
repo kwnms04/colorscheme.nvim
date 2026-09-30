@@ -24,7 +24,7 @@ function M.get(c, opts)
     Exception = { link = "Statement" },
     Operator = { fg = c.operator },
 
-    PreProc = { fg = c.keyword },
+    PreProc = { fg = c.module },
     Include = { link = "PreProc" },
     Define = { link = "PreProc" },
     Macro = { fg = c.builtin },
@@ -35,10 +35,10 @@ function M.get(c, opts)
     Structure = { fg = c.type },
     Typedef = { fg = c.type },
 
-    Special = { fg = c.special },
+    Special = { fg = c.type },
     SpecialChar = { fg = c.special },
     Tag = { fg = c.tag },
-    Delimiter = { fg = c.punctuation },
+    Delimiter = { fg = c.operator },
     SpecialComment = { fg = c.fg_gutter },
     Debug = { fg = c.number },
 

@@ -59,7 +59,7 @@ Highlight groups only reference semantic tokens.
 
 ### Palette
 
-Gray (hue 286):
+Gray:
 
 | 950 | 925 | 900 | 850 | 800 | 700 | 600 | 500 | 400 | 300 | 200 | 100 | 50 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -76,6 +76,8 @@ Accents (950/900 tinted background, 700 dim, 400 base, 300 bright):
 | cyan | `#0d2a2c` | `#023e41` | `#0a848b` | `#16c5ce` | `#47d6dc` |
 | blue | `#162735` | `#173852` | `#327ab0` | `#45abf6` | `#6cbffe` |
 | magenta | `#2b2032` | `#3f2c4c` | `#8961a4` | `#c18ae7` | `#d4a0f4` |
+| violet | `#252235` | `#362f52` | `#7667af` | `#9e89ea` | `#b4a4f9` |
+| teal | `#112b23` | `#073f32` | `#0b886d` | `#2bcfa8` | `#65ddbb` |
 
 ## Supported plugins
 

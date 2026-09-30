@@ -1,5 +1,5 @@
 -- Primitive color scale, generated in OKLCH.
--- gray: hue 286, near-neutral. accents: 950/900 tinted backgrounds,
+-- gray: near-neutral. accents: 950/900 tinted backgrounds,
 -- 700 dim, 400 base, 300 bright.
 return {
   gray = {
@@ -18,53 +18,67 @@ return {
     [50] = "#f1f1f6", -- brightest text
   },
   -- accents
-  red = { -- hue 20
+  red = {
     [950] = "#341e1e", -- error virtual text, deleted lines
     [900] = "#502828", -- deleted text (inline diff)
     [700] = "#ac5859", -- error notification border
-    [400] = "#f9686e", -- errors, builtins, git delete, terminal red
-    [300] = "#fe9091", -- parameters, terminal bright red
+    [400] = "#f9686e", -- errors, builtin variables, macros, git delete, terminal red
+    [300] = "#fe9091", -- terminal bright red
   },
-  orange = { -- hue 52
+  orange = {
     [950] = "#332015",
     [900] = "#4d2c16",
     [700] = "#a66031",
     [400] = "#fa8938", -- numbers, constants, current search
     [300] = "#fea872",
   },
-  yellow = { -- hue 85
+  yellow = {
     [950] = "#2d2410", -- warning virtual text
     [900] = "#44320a", -- search matches
     [700] = "#926e10", -- warning notification border
-    [400] = "#e4af2a", -- types, warnings, terminal yellow
+    [400] = "#e4af2a", -- parameters, warnings, terminal yellow
     [300] = "#f0c358", -- terminal bright yellow
   },
-  green = { -- hue 123
+  green = {
     [950] = "#222815", -- ok virtual text, added lines
     [900] = "#303a15", -- added text (inline diff)
     [700] = "#687f2e",
     [400] = "#a0c438", -- strings, git add, terminal green
     [300] = "#b8d862", -- terminal bright green
   },
-  cyan = { -- hue 201
+  cyan = {
     [950] = "#0d2a2c", -- hint virtual text
     [900] = "#023e41",
     [700] = "#0a848b",
-    [400] = "#16c5ce", -- operators, hints, terminal cyan
-    [300] = "#47d6dc", -- properties, terminal bright cyan
+    [400] = "#16c5ce", -- types, builtins, hints, terminal cyan
+    [300] = "#47d6dc", -- operators, delimiters, terminal bright cyan
   },
-  blue = { -- hue 244
+  blue = {
     [950] = "#162735", -- info virtual text, changed lines
     [900] = "#173852", -- changed text (inline diff)
     [700] = "#327ab0", -- info notification border
     [400] = "#45abf6", -- functions, tags, info, git change, terminal blue
-    [300] = "#6cbffe", -- terminal bright blue
+    [300] = "#6cbffe", -- modules, imports, preprocessor, terminal bright blue
   },
-  magenta = { -- hue 310
+  magenta = {
     [950] = "#2b2032",
     [900] = "#3f2c4c",
     [700] = "#8961a4", -- trace notification border
-    [400] = "#c18ae7", -- keywords, trace, terminal magenta
-    [300] = "#d4a0f4", -- escapes and specials, terminal bright magenta
+    [400] = "#c18ae7", -- escapes and specials, trace, terminal magenta
+    [300] = "#d4a0f4", -- terminal bright magenta
+  },
+  violet = {
+    [950] = "#252235",
+    [900] = "#362f52",
+    [700] = "#7667af",
+    [400] = "#9e89ea", -- keywords
+    [300] = "#b4a4f9",
+  },
+  teal = {
+    [950] = "#112b23",
+    [900] = "#073f32",
+    [700] = "#0b886d",
+    [400] = "#2bcfa8",
+    [300] = "#65ddbb", -- fields, properties
   },
 }
