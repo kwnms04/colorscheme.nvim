@@ -52,8 +52,8 @@ function M.get(c, opts)
     qfLineNr = { fg = c.fg_gutter },
     qfFileName = { fg = c.func },
 
-    htmlH1 = { fg = c.keyword, bold = true },
-    htmlH2 = { fg = c.func, bold = true },
+    htmlH1 = { link = "@markup.heading.1" },
+    htmlH2 = { link = "@markup.heading.2" },
     markdownCode = { fg = c.string },
     markdownCodeBlock = { fg = c.string },
     markdownH1 = { link = "htmlH1" },

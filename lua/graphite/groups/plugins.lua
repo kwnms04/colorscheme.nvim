@@ -231,7 +231,7 @@ function M.get(c, opts)
     MiniStatuslineModeInsert = { fg = c.bg_dark, bg = c.string, bold = true },
     MiniStatuslineModeVisual = { fg = c.bg_dark, bg = c.keyword, bold = true },
     MiniStatuslineModeReplace = { fg = c.bg_dark, bg = c.error, bold = true },
-    MiniStatuslineModeCommand = { fg = c.bg_dark, bg = c.type, bold = true },
+    MiniStatuslineModeCommand = { fg = c.bg_dark, bg = c.warn, bold = true },
     MiniStatuslineModeOther = { fg = c.bg_dark, bg = c.hint, bold = true },
     MiniStatuslineDevinfo = { fg = c.fg, bg = c.bg_surface },
     MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg_surface },

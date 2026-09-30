@@ -13,7 +13,7 @@ return {
   insert = mode(c.string),
   visual = mode(c.keyword),
   replace = mode(c.error),
-  command = mode(c.type),
+  command = mode(c.warn),
   terminal = mode(c.hint),
   inactive = {
     a = { fg = c.comment, bg = c.bg_dark },
