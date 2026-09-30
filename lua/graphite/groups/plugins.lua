@@ -95,7 +95,7 @@ function M.get(c, opts)
 
     -- snacks.indent
     SnacksIndent = { fg = c.bg_sel },
-    SnacksIndentScope = { fg = c.comment },
+    SnacksIndentScope = { fg = c.fg_gutter },
     SnacksIndentChunk = { link = "SnacksIndentScope" },
 
     -- nvim-tree
