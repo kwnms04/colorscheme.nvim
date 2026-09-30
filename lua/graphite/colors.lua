@@ -15,7 +15,8 @@ function M.get(opts)
     bg_dark = g[950], -- statusline, sidebars
     bg_darker = g[990], -- tabline fill, separators
     bg_highlight = g[850], -- cursorline, folds
-    bg_float = g[800],
+    bg_float = g[950], -- floats, pmenu: darker than bg, like sidebars
+    bg_surface = g[800], -- raised surfaces: statusline sections
     bg_sel = g[700], -- pmenu selection
     bg_visual = g[600],
     border = g[600],
