@@ -76,6 +76,13 @@ function M.get(c, opts)
     ErrorMsg = { fg = c.error },
     WarningMsg = { fg = c.warn },
     QuickFixLine = { bg = c.bg_sel, bold = true },
+    MsgSeparator = { fg = c.border, bg = c.bg_dark },
+    FloatShadow = { bg = c.bg_dark, blend = 80 },
+    FloatShadowThrough = { bg = c.bg_dark, blend = 100 },
+    SnippetTabstop = { bg = c.bg_sel },
+
+    debugPC = { bg = c.bg_highlight },
+    debugBreakpoint = { fg = c.error, bg = c.error_bg },
 
     SpellBad = { sp = c.error, undercurl = true },
     SpellCap = { sp = c.warn, undercurl = true },
@@ -95,6 +102,9 @@ function M.get(c, opts)
     diffFile = { fg = c.func, bold = true },
     diffLine = { fg = c.comment },
     diffIndexLine = { fg = c.keyword },
+    diffOldFile = { fg = c.git_delete },
+    diffNewFile = { fg = c.git_add },
+    gitcommitSummary = { fg = c.fg_bright },
 
     healthError = { fg = c.error },
     healthWarning = { fg = c.warn },

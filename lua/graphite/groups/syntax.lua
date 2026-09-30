@@ -58,6 +58,11 @@ function M.get(c, opts)
     markdownCodeBlock = { fg = c.string },
     markdownH1 = { link = "htmlH1" },
     markdownH2 = { link = "htmlH2" },
+    markdownH3 = { link = "@markup.heading.3" },
+    markdownH4 = { link = "@markup.heading.4" },
+    markdownH5 = { link = "@markup.heading.5" },
+    markdownH6 = { link = "@markup.heading.6" },
+    markdownHeadingDelimiter = { fg = c.comment },
     markdownLinkText = { fg = c.func, underline = true },
   }
 end

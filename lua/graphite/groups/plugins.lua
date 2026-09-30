@@ -30,6 +30,15 @@ local function kinds(c)
     Operator = c.operator,
     TypeParameter = c.type,
     Copilot = c.hint,
+    Array = c.punctuation,
+    Boolean = c.number,
+    Key = c.property,
+    Namespace = c.type,
+    Null = c.constant,
+    Number = c.number,
+    Object = c.constant,
+    Package = c.type,
+    String = c.string,
   }
 end
 
@@ -128,6 +137,126 @@ function M.get(c, opts)
     NeoTreeGitUntracked = { fg = c.special },
     NeoTreeDimText = { fg = c.comment },
 
+    -- snacks.nvim
+    SnacksDashboardHeader = { fg = c.func },
+    SnacksDashboardIcon = { fg = c.func },
+    SnacksDashboardKey = { fg = c.number },
+    SnacksDashboardDesc = { fg = c.fg_dim },
+    SnacksDashboardSpecial = { fg = c.keyword },
+    SnacksDashboardTitle = { fg = c.type, bold = true },
+    SnacksDashboardFooter = { fg = c.comment },
+    SnacksDashboardDir = { fg = c.comment },
+    SnacksInputIcon = { fg = c.func },
+    SnacksPickerPickWin = { fg = c.bg_dark, bg = c.warn, bold = true },
+    SnacksPickerPickWinCurrent = { fg = c.bg_dark, bg = c.number, bold = true },
+
+    -- noice.nvim
+    NoiceCmdlineIconInput = { fg = c.warn },
+    NoiceCmdlinePopupBorderInput = { fg = c.warn },
+    NoiceCmdlinePopupTitleInput = { fg = c.warn },
+    NoiceCmdlineIconLua = { fg = c.hint },
+    NoiceCmdlinePopupBorderLua = { fg = c.hint },
+    NoiceCmdlinePopupTitleLua = { fg = c.hint },
+    NoiceCompletionItemKindDefault = { fg = c.fg_dim },
+
+    -- mason.nvim
+    MasonHeader = { fg = c.bg_dark, bg = c.func, bold = true },
+    MasonHeaderSecondary = { fg = c.bg_dark, bg = c.hint, bold = true },
+    MasonHeading = { fg = c.func, bold = true },
+    MasonHighlight = { fg = c.ok },
+    MasonHighlightBlock = { fg = c.bg_dark, bg = c.ok },
+    MasonHighlightBlockBold = { fg = c.bg_dark, bg = c.ok, bold = true },
+    MasonHighlightSecondary = { fg = c.keyword },
+    MasonHighlightBlockSecondary = { fg = c.bg_dark, bg = c.func },
+    MasonHighlightBlockBoldSecondary = { fg = c.bg_dark, bg = c.func, bold = true },
+    MasonMuted = { fg = c.comment },
+    MasonMutedBlock = { fg = c.fg_dim, bg = c.bg_sel },
+    MasonMutedBlockBold = { fg = c.bg_dark, bg = c.warn, bold = true },
+    MasonError = { fg = c.error },
+
+    -- mini.nvim
+    MiniClueBorder = { link = "FloatBorder" },
+    MiniClueDescGroup = { fg = c.keyword },
+    MiniClueDescSingle = { link = "NormalFloat" },
+    MiniClueNextKey = { fg = c.func, bold = true },
+    MiniClueNextKeyWithPostkeys = { fg = c.error, bold = true },
+    MiniClueSeparator = { fg = c.comment },
+    MiniClueTitle = { link = "FloatTitle" },
+    MiniCursorword = { bg = c.bg_sel },
+    MiniCursorwordCurrent = { bg = c.bg_sel },
+    MiniDiffSignAdd = { fg = c.git_add },
+    MiniDiffSignChange = { fg = c.git_change },
+    MiniDiffSignDelete = { fg = c.git_delete },
+    MiniDiffOverAdd = { link = "DiffAdd" },
+    MiniDiffOverChange = { link = "DiffText" },
+    MiniDiffOverContext = { link = "DiffChange" },
+    MiniDiffOverDelete = { link = "DiffDelete" },
+    MiniFilesBorder = { link = "FloatBorder" },
+    MiniFilesBorderModified = { fg = c.warn, bg = c.bg_float },
+    MiniFilesCursorLine = { bg = c.bg_sel },
+    MiniFilesDirectory = { link = "Directory" },
+    MiniFilesFile = { fg = c.fg },
+    MiniFilesNormal = { link = "NormalFloat" },
+    MiniFilesTitle = { fg = c.fg_gutter, bg = c.bg_float },
+    MiniFilesTitleFocused = { link = "FloatTitle" },
+    MiniIndentscopeSymbol = { fg = c.fg_gutter, nocombine = true },
+    MiniIndentscopePrefix = { nocombine = true },
+    MiniJump = { fg = c.bg_dark, bg = c.number },
+    MiniNotifyBorder = { link = "FloatBorder" },
+    MiniNotifyNormal = { link = "NormalFloat" },
+    MiniNotifyTitle = { link = "FloatTitle" },
+    MiniPickBorder = { link = "FloatBorder" },
+    MiniPickBorderBusy = { fg = c.warn, bg = c.bg_float },
+    MiniPickBorderText = { fg = c.hint, bg = c.bg_float },
+    MiniPickHeader = { fg = c.hint, bg = c.bg_float },
+    MiniPickIconDirectory = { link = "Directory" },
+    MiniPickIconFile = { link = "MiniPickNormal" },
+    MiniPickMatchCurrent = { bg = c.bg_sel },
+    MiniPickMatchMarked = { link = "Visual" },
+    MiniPickMatchRanges = { fg = c.func, bold = true },
+    MiniPickNormal = { link = "NormalFloat" },
+    MiniPickPreviewLine = { bg = c.bg_highlight },
+    MiniPickPreviewRegion = { link = "IncSearch" },
+    MiniPickPrompt = { fg = c.info, bg = c.bg_float },
+    MiniStarterCurrent = { nocombine = true },
+    MiniStarterFooter = { fg = c.comment, italic = true },
+    MiniStarterHeader = { fg = c.func },
+    MiniStarterInactive = { fg = c.comment },
+    MiniStarterItem = { fg = c.fg },
+    MiniStarterItemBullet = { fg = c.border },
+    MiniStarterItemPrefix = { fg = c.warn },
+    MiniStarterQuery = { fg = c.info },
+    MiniStarterSection = { fg = c.keyword },
+    MiniStatuslineModeNormal = { fg = c.bg_dark, bg = c.func, bold = true },
+    MiniStatuslineModeInsert = { fg = c.bg_dark, bg = c.string, bold = true },
+    MiniStatuslineModeVisual = { fg = c.bg_dark, bg = c.keyword, bold = true },
+    MiniStatuslineModeReplace = { fg = c.bg_dark, bg = c.error, bold = true },
+    MiniStatuslineModeCommand = { fg = c.bg_dark, bg = c.type, bold = true },
+    MiniStatuslineModeOther = { fg = c.bg_dark, bg = c.hint, bold = true },
+    MiniStatuslineDevinfo = { fg = c.fg, bg = c.bg_surface },
+    MiniStatuslineFileinfo = { fg = c.fg, bg = c.bg_surface },
+    MiniStatuslineFilename = { fg = c.fg_dim, bg = c.bg_dark },
+    MiniStatuslineInactive = { fg = c.comment, bg = c.bg_dark },
+    MiniSurround = { fg = c.bg_dark, bg = c.number },
+    MiniTablineCurrent = { fg = c.fg, bg = c.bg, bold = true },
+    MiniTablineVisible = { fg = c.fg_dim, bg = c.bg_dark },
+    MiniTablineHidden = { fg = c.fg_gutter, bg = c.bg_dark },
+    MiniTablineModifiedCurrent = { fg = c.warn, bg = c.bg, bold = true },
+    MiniTablineModifiedVisible = { fg = c.warn, bg = c.bg_dark },
+    MiniTablineModifiedHidden = { fg = c.palette.yellow[700], bg = c.bg_dark },
+    MiniTablineFill = { bg = c.bg_dark },
+    MiniTrailspace = { bg = c.error },
+
+    -- trouble.nvim
+    TroubleNormal = { fg = c.fg, bg = bg_side },
+    TroubleNormalNC = { link = "TroubleNormal" },
+    TroubleText = { fg = c.fg_dim },
+    TroubleCount = { fg = c.keyword, bg = c.bg_sel },
+
+    -- flash.nvim
+    FlashBackdrop = { fg = c.comment },
+    FlashLabel = { fg = c.bg_dark, bg = c.number, bold = true },
+
     -- lazy.nvim
     LazyButton = { bg = c.bg_highlight },
     LazyButtonActive = { fg = c.bg_dark, bg = c.func, bold = true },
@@ -149,9 +278,34 @@ function M.get(c, opts)
   }
 
   for kind, color in pairs(kinds(c)) do
-    hl["CmpItemKind" .. kind] = { fg = color }
-    hl["BlinkCmpKind" .. kind] = { fg = color }
+    hl["LspKind" .. kind] = { fg = color }
+    hl["CmpItemKind" .. kind] = { link = "LspKind" .. kind }
+    hl["BlinkCmpKind" .. kind] = { link = "LspKind" .. kind }
+    hl["NoiceCompletionItemKind" .. kind] = { link = "LspKind" .. kind }
   end
+
+  -- notifications: snacks.notifier and nvim-notify share the level colors
+  local p = c.palette
+  local levels = {
+    Error = { c.error, p.red[700] },
+    Warn = { c.warn, p.yellow[700] },
+    Info = { c.info, p.blue[700] },
+    Debug = { c.debug, c.border },
+    Trace = { c.trace, p.magenta[700] },
+  }
+  for level, color in pairs(levels) do
+    local fg, border = color[1], color[2]
+    hl["SnacksNotifier" .. level] = { fg = c.fg, bg = c.bg_float }
+    hl["SnacksNotifierBorder" .. level] = { fg = border, bg = c.bg_float }
+    hl["SnacksNotifierIcon" .. level] = { fg = fg }
+    hl["SnacksNotifierTitle" .. level] = { fg = fg }
+    local up = level:upper()
+    hl["Notify" .. up .. "Body"] = { fg = c.fg, bg = c.bg_float }
+    hl["Notify" .. up .. "Border"] = { fg = border, bg = c.bg_float }
+    hl["Notify" .. up .. "Icon"] = { fg = fg }
+    hl["Notify" .. up .. "Title"] = { fg = fg }
+  end
+  hl.NotifyBackground = { bg = c.bg_float }
 
   return hl
 end

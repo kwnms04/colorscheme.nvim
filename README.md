@@ -80,8 +80,11 @@ Accents (950/900 tinted background, 700 dim, 400 base, 300 bright):
 ## Supported plugins
 
 Treesitter, LSP semantic tokens and diagnostics are built in. Plugins:
-gitsigns, telescope, nvim-cmp, blink.cmp, which-key, indent-blankline, snacks.indent,
-nvim-tree, neo-tree, lazy.nvim, mini.icons, lualine.
+gitsigns, telescope, nvim-cmp, blink.cmp, which-key, indent-blankline,
+snacks.nvim (picker, explorer, indent, notifier, dashboard, input), noice.nvim,
+nvim-notify, mason.nvim, mini.nvim (clue, cursorword, diff, files, icons,
+indentscope, jump, notify, pick, starter, statusline, surround, tabline,
+trailspace), trouble.nvim, flash.nvim, nvim-tree, neo-tree, lazy.nvim, lualine.
 
 ## Renaming
 

@@ -50,6 +50,8 @@ function M.get(opts)
     info = p.blue[400],
     hint = p.cyan[400],
     ok = p.green[400],
+    trace = p.magenta[400],
+    debug = g[500],
     error_bg = p.red[950],
     warn_bg = p.yellow[950],
     info_bg = p.blue[950],
