@@ -37,6 +37,7 @@ local modules = { "editor", "syntax", "treesitter", "lsp", "plugins" }
 
 local function set_terminal_colors(c)
   local p = c.palette
+  -- stylua: ignore
   local colors = {
     p.gray[800], p.red[400], p.green[400], p.yellow[400],
     p.blue[400], p.magenta[400], p.cyan[400], p.gray[300],
