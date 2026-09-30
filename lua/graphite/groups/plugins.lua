@@ -91,7 +91,7 @@ function M.get(c, opts)
     -- indent-blankline
     IblIndent = { fg = c.bg_sel, nocombine = true },
     IblWhitespace = { fg = c.bg_sel, nocombine = true },
-    IblScope = { fg = c.border, nocombine = true },
+    IblScope = { fg = c.fg_gutter, nocombine = true },
 
     -- snacks.indent
     SnacksIndent = { fg = c.bg_sel },
