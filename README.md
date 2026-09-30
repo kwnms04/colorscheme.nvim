@@ -40,6 +40,11 @@ require("graphite").setup({
 
 lualine: `require("lualine").setup({ options = { theme = "graphite" } })`
 
+## Extras
+
+- Ghostty: copy `extras/ghostty/graphite` to `~/.config/ghostty/themes/graphite`,
+  then set `theme = graphite` in your Ghostty config.
+
 ## Structure
 
 Colors go through three layers, so a change is made in one place:
@@ -85,4 +90,5 @@ The name appears in these places:
 - `colors/graphite.lua` (file name)
 - `lua/graphite/` (directory name, and `require("graphite...")` calls)
 - `lua/lualine/themes/graphite.lua` (file name)
+- `extras/ghostty/graphite` (file name)
 - `vim.g.colors_name = "graphite"` in `lua/graphite/init.lua`
