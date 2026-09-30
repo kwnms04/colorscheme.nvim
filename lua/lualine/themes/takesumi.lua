@@ -1,4 +1,4 @@
-local c = require("graphite.colors").get(require("graphite").config)
+local c = require("takesumi.colors").get(require("takesumi").config)
 
 local function mode(color)
   return {

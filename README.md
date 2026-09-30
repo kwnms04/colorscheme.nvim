@@ -1,9 +1,7 @@
-# graphite
+# takesumi
 
 A dark Neovim colorscheme with a near-neutral gray background and vivid accents.
-Colors are generated in OKLCH.
-
-> `graphite` is a working name. See [Renaming](#renaming).
+Colors are generated in OKLCH. The name comes from takesumi (竹炭), bamboo charcoal.
 
 ## Install
 
@@ -15,8 +13,8 @@ lazy.nvim:
   lazy = false,
   priority = 1000,
   config = function()
-    require("graphite").setup({})
-    vim.cmd.colorscheme("graphite")
+    require("takesumi").setup({})
+    vim.cmd.colorscheme("takesumi")
   end,
 }
 ```
@@ -24,7 +22,7 @@ lazy.nvim:
 ## Options
 
 ```lua
-require("graphite").setup({
+require("takesumi").setup({
   transparent = false, -- leave Normal/sidebar backgrounds unset
   terminal_colors = true, -- set vim.g.terminal_color_0..15
   styles = { -- any nvim_set_hl() attributes
@@ -38,12 +36,12 @@ require("graphite").setup({
 })
 ```
 
-lualine: `require("lualine").setup({ options = { theme = "graphite" } })`
+lualine: `require("lualine").setup({ options = { theme = "takesumi" } })`
 
 ## Extras
 
-- Ghostty: copy `extras/ghostty/graphite` to `~/.config/ghostty/themes/graphite`,
-  then set `theme = graphite` in your Ghostty config.
+- Ghostty: copy `extras/ghostty/takesumi` to `~/.config/ghostty/themes/takesumi`,
+  then set `theme = takesumi` in your Ghostty config.
 
 ## Structure
 
@@ -51,9 +49,9 @@ Colors go through three layers, so a change is made in one place:
 
 | Layer | File | Example |
 |---|---|---|
-| Palette (primitives) | `lua/graphite/palette.lua` | `gray[800]`, `red[400]` |
-| Semantic tokens | `lua/graphite/colors.lua` | `bg_float`, `error`, `diff_add` |
-| Highlight groups | `lua/graphite/groups/*.lua` | `NormalFloat`, `DiagnosticError` |
+| Palette (primitives) | `lua/takesumi/palette.lua` | `gray[800]`, `red[400]` |
+| Semantic tokens | `lua/takesumi/colors.lua` | `bg_float`, `error`, `diff_add` |
+| Highlight groups | `lua/takesumi/groups/*.lua` | `NormalFloat`, `DiagnosticError` |
 
 Highlight groups only reference semantic tokens.
 
@@ -87,13 +85,3 @@ snacks.nvim (picker, explorer, indent, notifier, dashboard, input), noice.nvim,
 nvim-notify, mason.nvim, mini.nvim (clue, cursorword, diff, files, icons,
 indentscope, jump, notify, pick, starter, statusline, surround, tabline,
 trailspace), trouble.nvim, flash.nvim, nvim-tree, neo-tree, lazy.nvim, lualine.
-
-## Renaming
-
-The name appears in these places:
-
-- `colors/graphite.lua` (file name)
-- `lua/graphite/` (directory name, and `require("graphite...")` calls)
-- `lua/lualine/themes/graphite.lua` (file name)
-- `extras/ghostty/graphite` (file name)
-- `vim.g.colors_name = "graphite"` in `lua/graphite/init.lua`

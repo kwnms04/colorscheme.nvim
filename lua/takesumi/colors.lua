@@ -1,9 +1,9 @@
 -- Semantic tokens. Highlight groups reference these, never the palette directly.
 local M = {}
 
----@param opts graphite.Config
+---@param opts takesumi.Config
 function M.get(opts)
-  local p = require("graphite.palette")
+  local p = require("takesumi.palette")
   local g = p.gray
 
   local c = {

@@ -1,15 +1,15 @@
 local M = {}
 
----@class graphite.Styles
+---@class takesumi.Styles
 ---@field comments? vim.api.keyset.highlight
 ---@field keywords? vim.api.keyset.highlight
 ---@field functions? vim.api.keyset.highlight
 ---@field variables? vim.api.keyset.highlight
 
----@class graphite.Config
+---@class takesumi.Config
 ---@field transparent? boolean leave Normal/sidebar backgrounds unset
 ---@field terminal_colors? boolean set vim.g.terminal_color_*
----@field styles? graphite.Styles
+---@field styles? takesumi.Styles
 ---@field on_colors? fun(colors: table) tweak semantic tokens before use
 ---@field on_highlights? fun(hl: table, colors: table) tweak highlight groups before they are applied
 M.defaults = {
@@ -25,10 +25,10 @@ M.defaults = {
   on_highlights = nil,
 }
 
----@type graphite.Config
+---@type takesumi.Config
 M.config = vim.deepcopy(M.defaults)
 
----@param opts? graphite.Config
+---@param opts? takesumi.Config
 function M.setup(opts)
   M.config = vim.tbl_deep_extend("force", vim.deepcopy(M.defaults), opts or {})
 end
@@ -51,11 +51,11 @@ end
 
 function M.load()
   local opts = M.config
-  local c = require("graphite.colors").get(opts)
+  local c = require("takesumi.colors").get(opts)
 
   local hl = {}
   for _, name in ipairs(modules) do
-    for group, spec in pairs(require("graphite.groups." .. name).get(c, opts)) do
+    for group, spec in pairs(require("takesumi.groups." .. name).get(c, opts)) do
       hl[group] = spec
     end
   end
@@ -68,7 +68,7 @@ function M.load()
   end
   vim.o.termguicolors = true
   vim.o.background = "dark"
-  vim.g.colors_name = "graphite"
+  vim.g.colors_name = "takesumi"
 
   for group, spec in pairs(hl) do
     vim.api.nvim_set_hl(0, group, spec)
