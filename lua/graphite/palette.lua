@@ -17,12 +17,54 @@ return {
     [100] = "#dddde4", -- emphasized text
     [50] = "#f1f1f6", -- brightest text
   },
-  -- accents, OKLCH hue at the end of each line
-  red = { [950] = "#341e1e", [900] = "#502828", [700] = "#ac5859", [400] = "#f9686e", [300] = "#fe9091" }, -- 20
-  orange = { [950] = "#332015", [900] = "#4d2c16", [700] = "#a66031", [400] = "#fa8938", [300] = "#fea872" }, -- 52
-  yellow = { [950] = "#2d2410", [900] = "#44320a", [700] = "#926e10", [400] = "#e4af2a", [300] = "#f0c358" }, -- 85
-  green = { [950] = "#222815", [900] = "#303a15", [700] = "#687f2e", [400] = "#a0c438", [300] = "#b8d862" }, -- 123
-  cyan = { [950] = "#0d2a2c", [900] = "#023e41", [700] = "#0a848b", [400] = "#16c5ce", [300] = "#47d6dc" }, -- 201
-  blue = { [950] = "#162735", [900] = "#173852", [700] = "#327ab0", [400] = "#45abf6", [300] = "#6cbffe" }, -- 244
-  magenta = { [950] = "#2b2032", [900] = "#3f2c4c", [700] = "#8961a4", [400] = "#c18ae7", [300] = "#d4a0f4" }, -- 310
+  -- accents
+  red = { -- hue 20
+    [950] = "#341e1e", -- error virtual text, deleted lines
+    [900] = "#502828", -- deleted text (inline diff)
+    [700] = "#ac5859", -- error notification border
+    [400] = "#f9686e", -- errors, builtins, git delete, terminal red
+    [300] = "#fe9091", -- parameters, terminal bright red
+  },
+  orange = { -- hue 52
+    [950] = "#332015",
+    [900] = "#4d2c16",
+    [700] = "#a66031",
+    [400] = "#fa8938", -- numbers, constants, current search
+    [300] = "#fea872",
+  },
+  yellow = { -- hue 85
+    [950] = "#2d2410", -- warning virtual text
+    [900] = "#44320a", -- search matches
+    [700] = "#926e10", -- warning notification border
+    [400] = "#e4af2a", -- types, warnings, terminal yellow
+    [300] = "#f0c358", -- terminal bright yellow
+  },
+  green = { -- hue 123
+    [950] = "#222815", -- ok virtual text, added lines
+    [900] = "#303a15", -- added text (inline diff)
+    [700] = "#687f2e",
+    [400] = "#a0c438", -- strings, git add, terminal green
+    [300] = "#b8d862", -- terminal bright green
+  },
+  cyan = { -- hue 201
+    [950] = "#0d2a2c", -- hint virtual text
+    [900] = "#023e41",
+    [700] = "#0a848b",
+    [400] = "#16c5ce", -- operators, hints, terminal cyan
+    [300] = "#47d6dc", -- properties, terminal bright cyan
+  },
+  blue = { -- hue 244
+    [950] = "#162735", -- info virtual text, changed lines
+    [900] = "#173852", -- changed text (inline diff)
+    [700] = "#327ab0", -- info notification border
+    [400] = "#45abf6", -- functions, tags, info, git change, terminal blue
+    [300] = "#6cbffe", -- terminal bright blue
+  },
+  magenta = { -- hue 310
+    [950] = "#2b2032",
+    [900] = "#3f2c4c",
+    [700] = "#8961a4", -- trace notification border
+    [400] = "#c18ae7", -- keywords, trace, terminal magenta
+    [300] = "#d4a0f4", -- escapes and specials, terminal bright magenta
+  },
 }
