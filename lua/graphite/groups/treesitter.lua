@@ -69,10 +69,10 @@ function M.get(c, opts)
 
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { link = "Comment" },
-    ["@comment.error"] = { fg = c.bg_darker, bg = c.error, bold = true },
-    ["@comment.warning"] = { fg = c.bg_darker, bg = c.warn, bold = true },
+    ["@comment.error"] = { fg = c.bg_dark, bg = c.error, bold = true },
+    ["@comment.warning"] = { fg = c.bg_dark, bg = c.warn, bold = true },
     ["@comment.todo"] = { link = "Todo" },
-    ["@comment.note"] = { fg = c.bg_darker, bg = c.hint, bold = true },
+    ["@comment.note"] = { fg = c.bg_dark, bg = c.hint, bold = true },
 
     ["@markup.strong"] = { bold = true },
     ["@markup.italic"] = { italic = true },

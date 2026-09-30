@@ -123,8 +123,8 @@ function M.get(c, opts)
 
     -- lazy.nvim
     LazyButton = { bg = c.bg_highlight },
-    LazyButtonActive = { fg = c.bg_darker, bg = c.func, bold = true },
-    LazyH1 = { fg = c.bg_darker, bg = c.func, bold = true },
+    LazyButtonActive = { fg = c.bg_dark, bg = c.func, bold = true },
+    LazyH1 = { fg = c.bg_dark, bg = c.func, bold = true },
     LazySpecial = { fg = c.func },
     LazyProgressDone = { fg = c.ok },
     LazyProgressTodo = { fg = c.nontext },

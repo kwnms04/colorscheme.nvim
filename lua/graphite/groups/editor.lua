@@ -31,9 +31,9 @@ function M.get(c, opts)
     Visual = { bg = c.bg_visual },
     VisualNOS = { link = "Visual" },
     Search = { fg = c.fg, bg = c.search },
-    IncSearch = { fg = c.bg_darker, bg = c.cur_search },
+    IncSearch = { fg = c.bg_dark, bg = c.cur_search },
     CurSearch = { link = "IncSearch" },
-    Substitute = { fg = c.bg_darker, bg = c.error },
+    Substitute = { fg = c.bg_dark, bg = c.error },
     MatchParen = { fg = c.number, bg = c.bg_sel, bold = true },
 
     NonText = { fg = c.nontext },
@@ -51,7 +51,7 @@ function M.get(c, opts)
     StatusLineNC = { fg = c.comment, bg = c.bg_dark },
     TabLine = { fg = c.fg_gutter, bg = c.bg_dark },
     TabLineSel = { fg = c.fg, bg = c.bg, bold = true },
-    TabLineFill = { bg = c.bg_darker },
+    TabLineFill = { bg = c.bg_dark },
 
     Pmenu = { fg = c.fg, bg = c.bg_float },
     PmenuSel = { bg = c.bg_sel, bold = true },

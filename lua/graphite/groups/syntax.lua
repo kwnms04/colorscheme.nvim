@@ -47,7 +47,7 @@ function M.get(c, opts)
     Italic = { italic = true },
     Ignore = { fg = c.comment },
     Error = { fg = c.error },
-    Todo = { fg = c.bg_darker, bg = c.warn, bold = true },
+    Todo = { fg = c.bg_dark, bg = c.warn, bold = true },
 
     qfLineNr = { fg = c.fg_gutter },
     qfFileName = { fg = c.func },
