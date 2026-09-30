@@ -47,14 +47,9 @@ function M.get(c, opts)
 
     -- telescope
     TelescopeNormal = { link = "NormalFloat" },
-    TelescopeBorder = { fg = c.bg_float, bg = c.bg_float },
-    TelescopeTitle = { fg = c.bg_dark, bg = c.func, bold = true },
-    TelescopePromptNormal = { fg = c.fg, bg = c.bg_highlight },
-    TelescopePromptBorder = { fg = c.bg_highlight, bg = c.bg_highlight },
-    TelescopePromptTitle = { fg = c.bg_dark, bg = c.func, bold = true },
-    TelescopePreviewTitle = { fg = c.bg_dark, bg = c.ok, bold = true },
-    TelescopeResultsTitle = { fg = c.bg_float, bg = c.bg_float },
-    TelescopePromptPrefix = { fg = c.func, bg = c.bg_highlight },
+    TelescopeBorder = { link = "FloatBorder" },
+    TelescopeTitle = { link = "FloatTitle" },
+    TelescopePromptPrefix = { fg = c.func },
     TelescopeSelection = { bg = c.bg_sel },
     TelescopeSelectionCaret = { fg = c.func, bg = c.bg_sel },
     TelescopeMatching = { fg = c.func, bold = true },
@@ -101,9 +96,8 @@ function M.get(c, opts)
     -- nvim-tree
     NvimTreeNormal = { fg = c.fg_dim, bg = bg_side },
     NvimTreeNormalNC = { link = "NvimTreeNormal" },
-    NvimTreeWinSeparator = { fg = bg_side, bg = bg_side },
-    NvimTreeEndOfBuffer = { fg = bg_side },
-    NvimTreeCursorLine = { bg = c.bg },
+    NvimTreeWinSeparator = { fg = c.separator, bg = bg_side },
+    NvimTreeCursorLine = { bg = c.bg_sel },
     NvimTreeRootFolder = { fg = c.func, bold = true },
     NvimTreeFolderName = { fg = c.func },
     NvimTreeFolderIcon = { fg = c.func },
@@ -117,9 +111,8 @@ function M.get(c, opts)
     -- neo-tree
     NeoTreeNormal = { fg = c.fg_dim, bg = bg_side },
     NeoTreeNormalNC = { link = "NeoTreeNormal" },
-    NeoTreeWinSeparator = { fg = bg_side, bg = bg_side },
-    NeoTreeEndOfBuffer = { fg = bg_side },
-    NeoTreeCursorLine = { bg = c.bg },
+    NeoTreeWinSeparator = { fg = c.separator, bg = bg_side },
+    NeoTreeCursorLine = { bg = c.bg_sel },
     NeoTreeRootName = { fg = c.func, bold = true },
     NeoTreeDirectoryName = { fg = c.func },
     NeoTreeDirectoryIcon = { fg = c.func },
@@ -129,15 +122,6 @@ function M.get(c, opts)
     NeoTreeGitDeleted = { fg = c.git_delete },
     NeoTreeGitUntracked = { fg = c.special },
     NeoTreeDimText = { fg = c.comment },
-
-    -- snacks.nvim picker / explorer: borderless, prompt raised, titles as pills
-    SnacksPickerBorder = { fg = c.bg_float, bg = c.bg_float },
-    SnacksPickerTitle = { fg = c.bg_dark, bg = c.func, bold = true },
-    SnacksPickerPreviewTitle = { fg = c.bg_dark, bg = c.ok, bold = true },
-    SnacksPickerInput = { fg = c.fg, bg = c.bg_highlight },
-    SnacksPickerInputBorder = { fg = c.bg_highlight, bg = c.bg_highlight },
-    SnacksPickerListCursorLine = { bg = c.bg },
-    SnacksWinSeparator = { fg = bg_side, bg = bg_side },
 
     -- lazy.nvim
     LazyButton = { bg = c.bg_highlight },
