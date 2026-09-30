@@ -34,7 +34,7 @@ local function kinds(c)
 end
 
 function M.get(c, opts)
-  local bg_dark = opts.transparent and c.none or c.bg_dark
+  local bg_side = opts.transparent and c.none or c.bg_float
   local hl = {
     -- gitsigns
     GitSignsAdd = { fg = c.git_add },
@@ -94,9 +94,10 @@ function M.get(c, opts)
     IblScope = { fg = c.border, nocombine = true },
 
     -- nvim-tree
-    NvimTreeNormal = { fg = c.fg_dim, bg = bg_dark },
+    NvimTreeNormal = { fg = c.fg_dim, bg = bg_side },
     NvimTreeNormalNC = { link = "NvimTreeNormal" },
-    NvimTreeWinSeparator = { fg = c.separator, bg = bg_dark },
+    NvimTreeWinSeparator = { fg = c.separator, bg = bg_side },
+    NvimTreeCursorLine = { bg = c.bg_sel },
     NvimTreeRootFolder = { fg = c.func, bold = true },
     NvimTreeFolderName = { fg = c.func },
     NvimTreeFolderIcon = { fg = c.func },
@@ -108,9 +109,10 @@ function M.get(c, opts)
     NvimTreeSpecialFile = { fg = c.keyword, underline = true },
 
     -- neo-tree
-    NeoTreeNormal = { fg = c.fg_dim, bg = bg_dark },
+    NeoTreeNormal = { fg = c.fg_dim, bg = bg_side },
     NeoTreeNormalNC = { link = "NeoTreeNormal" },
-    NeoTreeWinSeparator = { fg = c.separator, bg = bg_dark },
+    NeoTreeWinSeparator = { fg = c.separator, bg = bg_side },
+    NeoTreeCursorLine = { bg = c.bg_sel },
     NeoTreeRootName = { fg = c.func, bold = true },
     NeoTreeDirectoryName = { fg = c.func },
     NeoTreeDirectoryIcon = { fg = c.func },

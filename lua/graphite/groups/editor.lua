@@ -2,7 +2,7 @@ local M = {}
 
 function M.get(c, opts)
   local bg = opts.transparent and c.none or c.bg
-  local bg_dark = opts.transparent and c.none or c.bg_dark
+  local bg_side = opts.transparent and c.none or c.bg_float
 
   return {
     Normal = { fg = c.fg, bg = bg },
@@ -11,7 +11,7 @@ function M.get(c, opts)
     FloatBorder = { fg = c.border, bg = c.bg_float },
     FloatTitle = { fg = c.func, bg = c.bg_float, bold = true },
     FloatFooter = { fg = c.fg_gutter, bg = c.bg_float },
-    NormalSB = { fg = c.fg_dim, bg = bg_dark },
+    NormalSB = { fg = c.fg_dim, bg = bg_side },
 
     Cursor = { fg = c.bg, bg = c.fg },
     lCursor = { link = "Cursor" },
