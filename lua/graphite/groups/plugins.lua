@@ -93,6 +93,11 @@ function M.get(c, opts)
     IblWhitespace = { fg = c.bg_sel, nocombine = true },
     IblScope = { fg = c.border, nocombine = true },
 
+    -- snacks.indent
+    SnacksIndent = { fg = c.bg_sel },
+    SnacksIndentScope = { fg = c.comment },
+    SnacksIndentChunk = { link = "SnacksIndentScope" },
+
     -- nvim-tree
     NvimTreeNormal = { fg = c.fg_dim, bg = bg_side },
     NvimTreeNormalNC = { link = "NvimTreeNormal" },
