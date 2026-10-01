@@ -85,3 +85,7 @@ snacks.nvim (picker, explorer, indent, notifier, dashboard, input), noice.nvim,
 nvim-notify, mason.nvim, mini.nvim (clue, cursorword, diff, files, icons,
 indentscope, jump, notify, pick, starter, statusline, surround, tabline,
 trailspace), trouble.nvim, flash.nvim, nvim-tree, neo-tree, lazy.nvim, lualine.
+
+## License
+
+[MIT](LICENSE)
